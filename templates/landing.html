@@ -1,0 +1,240 @@
+{% extends "base.html" %}
+
+{% block title %}Sistema Mega Sena - Landing Page{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Banner IA Mega Sena -->
+    <div class="row justify-content-center mb-4">
+        <div class="col-lg-10 text-center">
+            <img src="/static/prints/banner_ia.png" class="img-fluid rounded shadow mb-4" style="max-width:700px;" alt="Aumente suas chances na Mega-Sena com IA">
+        </div>
+    </div>
+    <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center">
+            <h1 class="display-4 fw-bold text-success mb-3">Transforme sua sorte com Inteligência Artificial!</h1>
+            <p class="lead">Conheça o sistema mais avançado de análise e previsão para Mega Sena. Utilize IA e machine learning para aumentar suas chances de acertar!</p>
+            <a href="#comprar" class="btn btn-success btn-lg mt-3">Comprar Agora</a>
+        </div>
+    </div>
+    <!-- Galeria de prints -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-10">
+            <div id="printsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/static/prints/print1.jpg" class="d-block w-50 mx-auto rounded shadow" style="max-height:350px; object-fit:contain;" alt="Tela do sistema 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/static/prints/print3.jpg" class="d-block w-50 mx-auto rounded shadow" style="max-height:350px; object-fit:contain;" alt="Tela do sistema 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#printsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#printsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Benefícios -->
+    <div class="row mb-5">
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100 border-success">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-success">Análise Inteligente</h5>
+                    <p class="card-text">Utilize IA para identificar padrões e tendências nos sorteios históricos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100 border-success">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-success">Resultados Rápidos</h5>
+                    <p class="card-text">Receba análises e recomendações em segundos, direto na tela.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100 border-success">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-success">Fácil de Usar</h5>
+                    <p class="card-text">Interface intuitiva, acessível de qualquer dispositivo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Depoimentos -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto">
+            <h3 class="text-center mb-4">O que dizem nossos usuários</h3>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>"O sistema me ajudou a entender padrões que eu nunca tinha percebido! Muito fácil de usar."</p>
+                        <footer class="blockquote-footer">Carlos S.</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>"Recomendo para quem quer apostar com mais inteligência. As análises são rápidas e claras."</p>
+                        <footer class="blockquote-footer">Fernanda M.</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Chamada para ação -->
+    <div class="row mb-5" id="comprar">
+        <div class="col-lg-8 mx-auto text-center">
+            <h2 class="mb-3 text-success">Garanta já o seu acesso!</h2>
+            <p class="mb-4">Clique no botão abaixo para comprar agora mesmo pelo Hotmart e comece a usar o sistema em poucos minutos.</p>
+            <a href="https://www.hotmart.com/" target="_blank" class="btn btn-success btn-lg px-5 py-3">Comprar Agora</a>
+        </div>
+    </div>
+    <!-- Como funciona -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto">
+            <h3 class="text-center mb-4">Como funciona?</h3>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item">Adquira o acesso ao sistema clicando em "Comprar Agora".</li>
+                <li class="list-group-item">Receba o link e login por e-mail imediatamente após a confirmação.</li>
+                <li class="list-group-item">Acesse o sistema de qualquer dispositivo (PC, celular ou tablet).</li>
+                <li class="list-group-item">Gere análises e combinações inteligentes para seus jogos da Mega Sena.</li>
+            </ol>
+        </div>
+    </div>
+    <!-- Exemplo de Análise da IA -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto">
+            <h3 class="text-center mb-4">Exemplo de Análise da IA</h3>
+            <div class="text-center mb-3">
+                <img src="/static/prints/exemplo_analise.jpg" class="img-fluid rounded shadow" style="max-width:400px;" alt="Exemplo de análise da IA">
+            </div>
+            <p class="lead text-center">
+                Nossa Inteligência Artificial analisa milhares de resultados anteriores da Mega Sena, identificando padrões estatísticos, distribuição de pares e ímpares, números primos, múltiplos, sequências e muito mais. Com base nesses dados, o sistema sugere combinações com maior potencial, filtrando opções que já tiveram prêmios altos e priorizando aquelas com características estatisticamente favoráveis. Assim, você aposta com mais inteligência e estratégia!
+            </p>
+        </div>
+    </div>
+    <!-- Vantagens exclusivas -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto">
+            <h3 class="text-center mb-4">Vantagens Exclusivas</h3>
+            <ul class="list-group">
+                <li class="list-group-item">✔️ Acesso imediato e vitalício</li>
+                <li class="list-group-item">✔️ Atualizações automáticas do sistema</li>
+                <li class="list-group-item">✔️ Suporte dedicado por WhatsApp e e-mail</li>
+                <li class="list-group-item">✔️ Interface intuitiva e fácil de usar</li>
+                <li class="list-group-item">✔️ Funciona em qualquer dispositivo</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Formas de Geração de Números -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto">
+            <h3 class="text-center mb-4">Formas de Geração de Números</h3>
+            <div class="text-center mb-3">
+                <img src="/static/prints/print14.jpg" class="img-fluid rounded shadow" style="max-width:400px;" alt="Formas de geração de números">
+            </div>
+            <p class="lead text-center">
+                O sistema oferece 5 maneiras inteligentes de gerar combinações para a Mega Sena. Você escolhe a estratégia que preferir:
+            </p>
+            <ul class="list-group mb-3">
+                <li class="list-group-item">
+                    <strong>Unificado (Todos os Padrões):</strong> Combina todos os métodos e padrões em uma única geração inteligente, aproveitando o melhor de cada abordagem.
+                </li>
+                <li class="list-group-item">
+                    <strong>Inteligente (Padrões Históricos):</strong> Baseado em padrões que mais se repetem nos sorteios anteriores, focando em tendências reais.
+                </li>
+                <li class="list-group-item">
+                    <strong>IA (Rede Neural):</strong> Utiliza inteligência artificial avançada para prever combinações com base em aprendizado de máquina.
+                </li>
+                <li class="list-group-item">
+                    <strong>Avançado (Padrões Detalhados):</strong> Permite usar filtros e padrões detalhados, como quadrantes, linhas, inversões e muito mais.
+                </li>
+                <li class="list-group-item">
+                    <strong>Probabilístico (Estatísticas Reais):</strong> Gera combinações com base em estatísticas reais e probabilidades dos sorteios anteriores.
+                </li>
+            </ul>
+            <p class="text-center">Assim, você tem total liberdade para escolher a estratégia que mais combina com seu perfil!</p>
+        </div>
+    </div>
+    <!-- FAQ -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto">
+            <h3 class="text-center mb-4">Perguntas Frequentes</h3>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                            Preciso saber de programação para usar?
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Não! O sistema foi feito para qualquer pessoa, basta acessar e usar.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            Funciona no celular?
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Sim! O sistema é responsivo e funciona em qualquer dispositivo.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            Como recebo o acesso?
+                        </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Após a confirmação da compra, você recebe o acesso por e-mail imediatamente.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                            Tem suporte caso eu tenha dúvidas?
+                        </button>
+                    </h2>
+                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Sim! Oferecemos suporte por WhatsApp e e-mail para todos os clientes.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Garantia/Suporte -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+            <h3 class="mb-3">Garantia e Suporte</h3>
+            <p>Você conta com suporte dedicado para tirar dúvidas e garantir o melhor uso do sistema. Satisfação garantida ou seu dinheiro de volta em até 7 dias!</p>
+        </div>
+    </div>
+    <!-- Segundo botão de compra -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+            <a href="https://www.hotmart.com/" target="_blank" class="btn btn-success btn-lg px-5 py-3">Quero Garantir Meu Acesso Agora</a>
+        </div>
+    </div>
+    <!-- Rodapé -->
+    <footer class="bg-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1">&copy; {{ 2025 }} Sistema Mega Sena. Todos os direitos reservados.</p>
+            <p class="mb-0">
+                Contato: <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a> |
+                WhatsApp: <a href="https://wa.me/5599999999999" target="_blank">(99) 99999-9999</a> |
+                Instagram: <a href="https://instagram.com/seuinsta" target="_blank">@seuinsta</a>
+            </p>
+        </div>
+    </footer>
+</div>
+{% endblock %} 
