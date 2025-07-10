@@ -264,7 +264,7 @@
 {% endblock %} 
 
 <script>
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function() {
     var duration = 15 * 60; // 15 minutos
     var display = document.getElementById('countdown');
     if (display) {
@@ -280,5 +280,5 @@ window.onload = function () {
             }
         }, 1000);
     }
-};
+});
 </script> 
