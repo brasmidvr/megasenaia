@@ -17,6 +17,7 @@
             <div class="mb-2">
                 <span class="badge bg-danger fs-5">De R$ 130,00 por apenas <strong>R$ 50,00</strong> <span class="text-dark">(acesso vitalício)</span></span>
             </div>
+            <!-- Mantenha apenas UM contador na página, acima do primeiro botão de compra -->
             <div class="mb-2">
                 <span class="fw-bold text-danger">Oferta termina em: <span id="countdown">15:00</span></span>
             </div>
@@ -103,6 +104,7 @@
             <div class="mb-2">
                 <span class="badge bg-danger fs-5">De R$ 130,00 por apenas <strong>R$ 50,00</strong> <span class="text-dark">(acesso vitalício)</span></span>
             </div>
+            <!-- Remova outros contadores duplicados dos outros botões -->
             <div class="mb-2">
                 <span class="fw-bold text-danger">Oferta termina em: <span id="countdown">15:00</span></span>
             </div>
@@ -262,22 +264,21 @@
 {% endblock %} 
 
 <script>
-function startCountdown(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-        display.textContent = minutes + ":" + seconds;
-        if (--timer < 0) {
-            timer = 0;
-        }
-    }, 1000);
-}
 window.onload = function () {
     var duration = 15 * 60; // 15 minutos
-    var display = document.querySelector('#countdown');
-    if (display) startCountdown(duration, display);
+    var display = document.getElementById('countdown');
+    if (display) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            display.textContent = minutes + ":" + seconds;
+            if (--timer < 0) {
+                timer = 0;
+            }
+        }, 1000);
+    }
 };
 </script> 
