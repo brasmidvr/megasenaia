@@ -23,6 +23,15 @@
     src="https://www.facebook.com/tr?id=2269497933481722&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
+    
+    <!-- Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-CONVERSION_ID');
+    </script>
 </head>
 <body>
     {% block content %}{% endblock %}
@@ -45,6 +54,32 @@
                 }
             }, 1000);
         }
+        
+        // Eventos de conversão para botões de compra
+        var buyButtons = document.querySelectorAll('a[href*="sendrpay.com"]');
+        buyButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                // Facebook Pixel - Evento de conversão
+                fbq('track', 'Purchase', {
+                    value: 50.00,
+                    currency: 'BRL',
+                    content_name: 'MegaIA - Sistema Mega Sena',
+                    content_category: 'Software'
+                });
+                
+                // Google Ads - Evento de conversão
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+                    'value': 50.00,
+                    'currency': 'BRL'
+                });
+                
+                // Aguarda um pouco antes de redirecionar para garantir que o evento seja enviado
+                setTimeout(function() {
+                    // O redirecionamento acontece normalmente
+                }, 500);
+            });
+        });
     });
     </script>
     <!-- Bootstrap JS CDN -->
