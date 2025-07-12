@@ -47,22 +47,43 @@
         }
         
         // Eventos de conversão para botões de compra - Facebook Ads
+        function trackPurchase() {
+            console.log('Evento de compra disparado!');
+            fbq('track', 'Purchase', {
+                value: 50.00,
+                currency: 'BRL',
+                content_name: 'MegaIA - Sistema Mega Sena',
+                content_category: 'Software'
+            });
+        }
+        
+        // Detectar todos os botões de compra
         var buyButtons = document.querySelectorAll('a[href*="sendrpay.com"]');
-        buyButtons.forEach(function(button) {
-            button.addEventListener('click', function() {
-                // Facebook Pixel - Evento de conversão
-                fbq('track', 'Purchase', {
-                    value: 50.00,
-                    currency: 'BRL',
-                    content_name: 'MegaIA - Sistema Mega Sena',
-                    content_category: 'Software'
-                });
+        console.log('Botões de compra encontrados:', buyButtons.length);
+        
+        buyButtons.forEach(function(button, index) {
+            console.log('Configurando evento para botão', index + 1);
+            button.addEventListener('click', function(e) {
+                console.log('Clique detectado no botão de compra!');
+                trackPurchase();
                 
                 // Aguarda um pouco antes de redirecionar para garantir que o evento seja enviado
                 setTimeout(function() {
-                    // O redirecionamento acontece normalmente
-                }, 500);
+                    console.log('Redirecionando para checkout...');
+                }, 1000);
             });
+        });
+        
+        // Também detectar por texto do botão (backup)
+        var allButtons = document.querySelectorAll('a.btn');
+        allButtons.forEach(function(button) {
+            if (button.textContent.toLowerCase().includes('comprar') || 
+                button.textContent.toLowerCase().includes('buy')) {
+                button.addEventListener('click', function(e) {
+                    console.log('Clique detectado em botão de compra (backup)!');
+                    trackPurchase();
+                });
+            }
         });
     });
     </script>
