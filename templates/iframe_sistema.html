@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+{% block title %}Sistema Mega Sena IA{% endblock %}
+
+{% block content %}
+<style>
+/* Estilos específicos para iframe */
+body {
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+}
+
+.iframe-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+.system-header {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.system-content {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.feature-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #28a745;
+}
+
+.demo-section {
+    background: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Responsivo para iframe */
+@media (max-width: 768px) {
+    .iframe-container {
+        padding: 10px;
+    }
+    
+    .system-content {
+        padding: 20px;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<div class="iframe-container">
+    <div class="system-header">
+        <h2>🚀 Sistema Mega Sena IA</h2>
+        <p>Sua ferramenta inteligente para análise da Mega Sena</p>
+    </div>
+
+    <div class="system-content">
+        <div class="row">
+            <div class="col-md-8">
+                <h4>Como Funciona</h4>
+                <p>Nosso sistema utiliza inteligência artificial para analisar padrões históricos da Mega Sena e sugerir combinações com maior potencial de sucesso.</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h6>📊 Análise Inteligente</h6>
+                        <p>IA analisa milhares de resultados anteriores para identificar padrões.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h6>⚡ Resultados Rápidos</h6>
+                        <p>Receba análises e sugestões em segundos, direto na tela.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h6>🎯 Precisão Aumentada</h6>
+                        <p>Aumente suas chances com análises baseadas em dados reais.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h6>📱 Fácil de Usar</h6>
+                        <p>Interface intuitiva, acessível de qualquer dispositivo.</p>
+                    </div>
+                </div>
+
+                <div class="demo-section">
+                    <h5>Exemplo de Análise</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="/static/prints/exemplo_analise.jpg" class="img-fluid rounded" alt="Exemplo de análise">
+                        </div>
+                        <div class="col-md-6">
+                            <p>Nossa IA analisa:</p>
+                            <ul>
+                                <li>Frequência de números</li>
+                                <li>Padrões de sequência</li>
+                                <li>Distribuição de pares/ímpares</li>
+                                <li>Números primos e múltiplos</li>
+                                <li>Histórico de combinações</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Acesso ao Sistema</h5>
+                        <div class="mb-3">
+                            <span class="badge bg-danger fs-5">De R$ 130,00 por apenas</span>
+                            <div class="h3 text-success mt-2">R$ 50,00</div>
+                            <small class="text-muted">Acesso vitalício</small>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <span class="fw-bold text-danger">Oferta termina em: <span class="countdown">15:00</span></span>
+                        </div>
+                        
+                        <a href="/comprar" class="btn btn-success btn-lg w-100 mb-3">
+                            Comprar Agora
+                        </a>
+                        
+                        <div class="small text-muted">
+                            ✅ Acesso imediato<br>
+                            ✅ Atualizações gratuitas<br>
+                            ✅ Suporte 24/7<br>
+                            ✅ Garantia de 30 dias
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h6>Estatísticas do Sistema</h6>
+                        <div class="row text-center">
+                            <div class="col-6">
+                                <div class="h4 text-success">1,250+</div>
+                                <small>Usuários ativos</small>
+                            </div>
+                            <div class="col-6">
+                                <div class="h4 text-primary">85%</div>
+                                <small>Taxa de satisfação</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h4>Transforme sua sorte hoje mesmo!</h4>
+        <p>Junte-se a milhares de apostadores que já usam a inteligência artificial para apostar com mais estratégia.</p>
+        <a href="/comprar" class="btn btn-light btn-lg">
+            <i class="fas fa-rocket me-2"></i>
+            Começar Agora - R$ 50,00
+        </a>
+    </div>
+</div>
+
+<script>
+// Contador regressivo
+document.addEventListener("DOMContentLoaded", function() {
+    var duration = 15 * 60; // 15 minutos
+    var countdowns = document.querySelectorAll('.countdown');
+    if (countdowns.length > 0) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            countdowns.forEach(function(display) {
+                display.textContent = minutes + ":" + seconds;
+            });
+            if (--timer < 0) {
+                timer = 0;
+            }
+        }, 1000);
+    }
+});
+
+// Notificar parent window sobre altura do iframe
+function updateIframeHeight() {
+    const height = document.body.scrollHeight;
+    if (window.parent && window.parent !== window) {
+        window.parent.postMessage({
+            type: 'iframe-height',
+            height: height
+        }, '*');
+    }
+}
+
+// Atualizar altura quando conteúdo mudar
+window.addEventListener('load', updateIframeHeight);
+window.addEventListener('resize', updateIframeHeight);
+
+// Observar mudanças no DOM
+const observer = new MutationObserver(updateIframeHeight);
+observer.observe(document.body, {
+    childList: true,
+    subtree: true
+});
+</script>
+{% endblock %} 
