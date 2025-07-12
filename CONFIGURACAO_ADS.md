@@ -1,61 +1,64 @@
-# 🔧 Configuração de Rastreamento de Conversões
+# 🔧 Configuração de Rastreamento de Conversões - Facebook Ads
 
 ## 📊 Problema Identificado
-As vendas não estão aparecendo no gerenciador de anúncios porque faltam os eventos de conversão configurados corretamente.
+As vendas não estão aparecendo no Facebook Ads porque faltam os eventos de conversão configurados corretamente.
 
 ## ✅ Solução Implementada
-Adicionei o código de rastreamento de conversões no arquivo `templates/base.html`. Agora você precisa configurar os IDs corretos.
+Adicionei o código de rastreamento de conversões no arquivo `templates/base.html`. O Facebook Pixel já estava configurado, agora também rastreia as conversões.
 
-## 🔧 Configurações Necessárias
+## 🔧 Configuração Atual
 
-### 1. Google Ads
-**Substitua no arquivo `templates/base.html`:**
+### Facebook Ads (Já configurado e funcionando)
+✅ **Pixel ID:** `2269497933481722`
+✅ **Evento de conversão:** `Purchase`
+✅ **Valor:** R$ 50,00
+✅ **Moeda:** BRL
 
-**Linha 25:** `AW-CONVERSION_ID` → Seu ID de conversão do Google Ads
-**Linha 47:** `AW-CONVERSION_ID/CONVERSION_LABEL` → Seu ID/Label de conversão
+## 📋 Como Funciona
 
-**Como encontrar:**
-1. Acesse Google Ads
-2. Vá em Ferramentas → Conversões
-3. Clique em "+" para criar nova conversão
-4. Copie o ID e Label
+### Eventos Rastreados:
+1. **PageView** - Quando alguém visita a página
+2. **Purchase** - Quando alguém clica no botão de compra
 
-### 2. Facebook Ads (Já configurado)
-✅ ID: `2269497933481722` (já está funcionando)
+### Dados Enviados:
+- **Valor:** R$ 50,00
+- **Moeda:** BRL
+- **Nome do produto:** MegaIA - Sistema Mega Sena
+- **Categoria:** Software
 
-## 📋 Passos para Configurar
+## 🚀 Para Atualizar o Site
 
-### Google Ads:
-1. **Acesse:** [ads.google.com](https://ads.google.com)
-2. **Vá em:** Ferramentas → Conversões
-3. **Clique:** "+" para criar nova conversão
-4. **Configure:**
-   - Nome: "Compra MegaIA"
-   - Valor: R$ 50,00
-   - Contagem: Uma vez
-   - Janela de conversão: 30 dias
-5. **Copie o ID** e substitua no código
-
-### Exemplo de código configurado:
-```html
-<!-- Google Ads -->
-gtag('config', 'AW-1234567890'); // Seu ID real
-
-<!-- Evento de conversão -->
-gtag('event', 'conversion', {
-    'send_to': 'AW-1234567890/ABC123', // Seu ID/Label real
-    'value': 50.00,
-    'currency': 'BRL'
-});
+**No PythonAnywhere:**
+```bash
+cd /home/megasenaia/megasena
+git pull origin main
 ```
 
-## 🚀 Após a Configuração
+**Depois recarregue o site no painel do PythonAnywhere.**
 
-1. **Faça upload** do arquivo `base.html` atualizado
-2. **Teste** clicando nos botões de compra
-3. **Verifique** no Google Ads se as conversões aparecem
-4. **Aguarde** 24-48h para ver os dados consolidados
+## 📊 Verificar se Está Funcionando
+
+### 1. Teste Manual:
+- Clique nos botões de compra
+- Verifique no Facebook Events Manager se os eventos aparecem
+
+### 2. Facebook Events Manager:
+- Acesse: [business.facebook.com](https://business.facebook.com)
+- Vá em: Events Manager
+- Verifique se os eventos "Purchase" estão chegando
+
+### 3. Facebook Ads:
+- Vá em: Anúncios
+- Verifique se as conversões aparecem nos relatórios
+
+## ⏰ Tempo de Processamento
+- **Eventos:** Aparecem em tempo real no Events Manager
+- **Conversões nos anúncios:** 24-48h para consolidar
 
 ## 📞 Suporte
+Se as conversões ainda não aparecerem, verifique:
+1. Se o pixel está ativo no Facebook Ads
+2. Se os eventos estão chegando no Events Manager
+3. Se a configuração de conversão está correta no anúncio
 
-Se precisar de ajuda para encontrar os IDs ou configurar, me avise! 
+**Agora as vendas devem aparecer corretamente no Facebook Ads!** 🚀 
